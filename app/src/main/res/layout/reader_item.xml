@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/abdelbaset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reader_item"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_abdelbaset"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/abdelbaset" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reader_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/image_abdelbaset"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Abdelbaset"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reader_name"
+                android:layout_alignStart="@+id/reader_name"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="from alkweat pron in 1970" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mashary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reader_item"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/al3fasi" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reader_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/image1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Mashar Rashed"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reader_name1"
+                android:layout_alignStart="@+id/reader_name1"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="from alkweat pron in 1970" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nasr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reader_item"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/naser" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reader_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/image2"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Naser AlQatami"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reader_name2"
+                android:layout_alignStart="@+id/reader_name2"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="from alkweat pron in 1970" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/yaser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reader_item"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/eldosry" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reader_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/image3"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Yaser Aldosary"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reader_name3"
+                android:layout_alignStart="@+id/reader_name3"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="from alkweat pron in 1970" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/alagmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reader_item"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/alajmi" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reader_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/image4"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Ahmed Alagmi"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reader_name4"
+                android:layout_alignStart="@+id/reader_name4"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="from alkweat pron in 1970" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reader_item"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fares" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reader_name5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/image5"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Fares Abbad"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reader_name5"
+                android:layout_alignStart="@+id/reader_name5"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="from alkweat pron in 1970" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
+

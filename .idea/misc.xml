@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/collabs.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/reader_item.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/reader_selected_item.xml" value="0.3154296875" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/shape.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/shr_product_grid_background_shape.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/activity_main.xml" value="0.16865079365079366" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah_details.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/main_back_drop.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/reader_item.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/surah_details_item.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/surah_item.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
