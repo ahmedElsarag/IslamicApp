@@ -1,4 +1,4 @@
-package com.example.islamicapp;
+package com.example.islamicapp.common;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
+
+import com.example.islamicapp.R;
 
 /**
  * {@link View.OnClickListener} used to translate the product grid sheet downward on
@@ -26,7 +28,7 @@ public class NavigationIconClickListener implements View.OnClickListener {
     private Drawable openIcon;
     private Drawable closeIcon;
 
-    NavigationIconClickListener(Context context, View sheet) {
+    public NavigationIconClickListener(Context context, View sheet) {
         this(context, sheet, null);
     }
 

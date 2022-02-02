@@ -3,20 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/all_radius_outlined_shape.xml" value="0.18" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/all_radius_shape.xml" value="0.18" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/azkar_background.xml" value="0.2755208333333333" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/collabs.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/gradiant_shape.xml" value="0.18" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2755208333333333" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/media.xml" value="0.2755208333333333" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/nav_icon.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/purple_trans_shape.xml" value="0.18" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/reader_item.xml" value="0.17401315789473684" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/reader_selected_item.xml" value="0.3154296875" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/secondary_rounded_shape.xml" value="0.2755208333333333" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/shape.xml" value="0.17401315789473684" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/shr_product_grid_background_shape.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/white_trans_shape.xml" value="0.2755208333333333" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/activity_main.xml" value="0.16865079365079366" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/activity_qibla_finder.xml" value="0.259375" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/azkar_item.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_azkar.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_home.xml" value="0.259375" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_qibla.xml" value="0.259375" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah_details.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/main_back_drop.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/reader_item.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/surah_details_item.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/surah_item.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2755208333333333" />
       </map>
     </option>
   </component>

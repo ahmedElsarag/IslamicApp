@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="purple_500">#5C1349</color>
+    <color name="purple_700">#4E0D3A</color>
+    <color name="teal_200">#E9C50F</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#00502b</color>
-    <color name="transpernt_green">#9000502b</color>
+    <color name="transpernt_green">#2600502b</color>
     <color name="collaps">#e65a2ca8</color>
     <color name="productGridBackgroundColor">#FFFBFA</color>
+    <color name="secondary">#E7E9F8</color>
+    <color name="secondary_darker">#c5cbfc</color>
+    <color name="white_trans">#4dffffff</color>
+    <color name="purple_trans_70">#B34E0D3A</color>
+    <color name="purple_trans">#265C1349</color>
 </resources>

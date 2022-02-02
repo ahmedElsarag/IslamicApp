@@ -19,11 +19,10 @@
 
             <View
                 android:id="@+id/view"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/surah_num" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/star" />
 
             <TextView
                 android:id="@+id/ayah_num"

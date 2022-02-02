@@ -3,24 +3,19 @@ package com.example.islamicapp.ui;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.ContextCompat;
 
-import com.example.islamicapp.MainActivity;
 import com.example.islamicapp.R;
-import com.example.islamicapp.common.Variables;
+import com.example.islamicapp.Variables;
 import com.example.islamicapp.databinding.FragmentBottomSheetBinding;
-import com.example.islamicapp.databinding.SurahDetailsItemBinding;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 

@@ -1,18 +1,14 @@
-package com.example.islamicapp;
+package com.example.islamicapp.common;
 
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
-import android.os.HandlerThread;
-import android.util.Log;
 import android.widget.SeekBar;
 
-import com.example.islamicapp.common.Variables;
+import com.example.islamicapp.Variables;
 
 import java.util.concurrent.TimeUnit;
-
-import io.reactivex.rxjava3.core.Observable;
 
 
 public class SurahMediaPlayer {
@@ -21,16 +17,12 @@ public class SurahMediaPlayer {
     static SurahMediaPlayer instance = null;
     Context context;
     Runnable runnable = null;
-    HandlerThread handlerThread = new HandlerThread("player");
-    Handler handler ;
+    Handler handler = new Handler();
     Variables variables = new Variables();
     private static final String TAG = "mediap";
 
     public SurahMediaPlayer(Context context) {
         this.context = context;
-        handlerThread.start();
-        handler = new Handler(handlerThread.getLooper());
-
     }
 
     public void initMediaPlayer(SeekBar seekBar, String qarea, String id) {
@@ -45,13 +37,7 @@ public class SurahMediaPlayer {
             runnable = new Runnable() {
                 @Override
                 public void run() {
-                    seekBar.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            seekBar.setProgress(mediaPlayer.getCurrentPosition());
-
-                        }
-                    });
+                    seekBar.setProgress(mediaPlayer.getCurrentPosition());
                     handler.postDelayed(runnable, 500);
                 }
             };
@@ -74,7 +60,7 @@ public class SurahMediaPlayer {
 
     public void readerChange(){
         mediaPlayer.stop();
-       // handler.removeCallbacks(runnable);
+       handler.removeCallbacks(runnable);
         mediaPlayer = null;
     }
 
@@ -111,11 +97,11 @@ public class SurahMediaPlayer {
 
     public void pauseMediaPlayer() {
         mediaPlayer.pause();
-       // handler.removeCallbacks(runnable);
+        handler.removeCallbacks(runnable);
     }
 
     public void onSeekbarDraged(int progress) {
-       // mediaPlayer.seekTo(progress);
+       mediaPlayer.seekTo(progress);
     }
 
     public void onComplete() {

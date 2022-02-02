@@ -3,29 +3,23 @@ package com.example.islamicapp.ui;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import com.example.islamicapp.R;
-import com.example.islamicapp.SurahMediaPlayer;
+import com.example.islamicapp.common.SurahMediaPlayer;
 import com.example.islamicapp.adapter.SuraDetailsAdapter;
-import com.example.islamicapp.common.Variables;
+import com.example.islamicapp.Variables;
 import com.example.islamicapp.databinding.FragmentSurahDetailsBinding;
 import com.example.islamicapp.model.SurahDetails;
-import com.example.islamicapp.model.SurahDetailsResponse;
 import com.example.islamicapp.viewmodel.SurahDetailsViewModel;
 
 import java.util.ArrayList;
@@ -58,6 +52,7 @@ public class SurahDetailsFragment extends Fragment implements View.OnClickListen
         String translationLanguage = prefs.getString(Variables.LANGUAGE, Variables.ENGLISH);
         getData(translationLanguage, Variables.position);
         prefs.registerOnSharedPreferenceChangeListener(this);
+        binding.surahName.setText(Variables.surahName);
 
         return binding.getRoot();
     }

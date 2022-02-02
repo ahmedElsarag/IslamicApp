@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.islamicapp.common.NavigationHost;
-import com.example.islamicapp.common.SurahAdapterListener;
-import com.example.islamicapp.common.Variables;
+import com.example.islamicapp.common.AdapterListener;
+import com.example.islamicapp.Variables;
 import com.example.islamicapp.adapter.SurahAdapter;
 import com.example.islamicapp.databinding.FragmentSurahBinding;
 import com.example.islamicapp.model.Surah;
@@ -21,7 +21,7 @@ import com.example.islamicapp.viewmodel.SurahViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SurahFragment extends Fragment implements SurahAdapterListener {
+public class SurahFragment extends Fragment implements AdapterListener {
     SurahViewModel surahViewModel;
     private SurahAdapter surahAdapter;
     FragmentSurahBinding binding;
@@ -57,9 +57,12 @@ public class SurahFragment extends Fragment implements SurahAdapterListener {
     }
 
     @Override
-    public void onSurahListener(int position) {
+    public void onSurahListener(int position, String name) {
        ((NavigationHost) (getActivity())).navigateTo(new SurahDetailsFragment(), true);
         Variables.position = position;
+        Variables.surahName = name;
 
     }
+
+
 }

@@ -9,13 +9,14 @@ public class ApiClient {
     public static Retrofit instance;
 
     public static Retrofit getInstance(){
-        if(instance == null) {
+        if(instance != null)
+            instance=null;
             instance = new Retrofit.Builder()
                     .baseUrl("http://api.alquran.cloud/v1/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                     .build();
-        }
+
         return instance;
     }
     public static Retrofit getOverrideInstance(){
@@ -29,5 +30,19 @@ public class ApiClient {
         return instance;
 
     }
+
+    public static Retrofit getPrayerRetrofitInstance(){
+        if (instance!=null)
+            instance=null;
+        instance = new Retrofit.Builder()
+                .baseUrl("http://api.aladhan.com/v1/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+                .build();
+        return instance;
+
+    }
+
+
 
 }

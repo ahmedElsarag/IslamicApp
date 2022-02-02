@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.islamicapp.R;
-import com.example.islamicapp.common.SurahAdapterListener;
+import com.example.islamicapp.common.AdapterListener;
 import com.example.islamicapp.databinding.SurahItemBinding;
 import com.example.islamicapp.model.Surah;
 
@@ -19,9 +19,9 @@ import java.util.List;
 public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.SurahHolder> {
     List<Surah> list;
     Context context;
-    SurahAdapterListener surahAdapterListener;
+    AdapterListener surahAdapterListener;
 
-    public SurahAdapter(List<Surah> list, Context context, SurahAdapterListener surahAdapterListener) {
+    public SurahAdapter(List<Surah> list, Context context, AdapterListener surahAdapterListener) {
         this.list = list;
         this.context = context;
         this.surahAdapterListener = surahAdapterListener;
@@ -60,9 +60,9 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.SurahHolder>
 
     public class SurahHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         SurahItemBinding binding;
-        private SurahAdapterListener surahAdapterListener;
+        private AdapterListener surahAdapterListener;
 
-        public SurahHolder(@NonNull SurahItemBinding binding, SurahAdapterListener surahAdapterListener) {
+        public SurahHolder(@NonNull SurahItemBinding binding, AdapterListener surahAdapterListener) {
             super(binding.getRoot());
             this.binding = binding;
             this.surahAdapterListener = surahAdapterListener;
@@ -72,7 +72,7 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.SurahHolder>
 
         @Override
         public void onClick(View view) {
-            surahAdapterListener.onSurahListener(getAdapterPosition());
+            surahAdapterListener.onSurahListener(getAdapterPosition(),list.get(getAdapterPosition()).getName());
         }
     }
 }
