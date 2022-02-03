@@ -18,7 +18,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            android:text="Qibla Compass"
+            android:text="@string/qibla_dir"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="24sp" />

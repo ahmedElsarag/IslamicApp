@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IslamicApp</string>
+
+    <string name="negative_btn">قبول</string>
+    <string name="positive_btn">الغاء</string>
+    <string name="deny_perm_twice">اذا قمت بالرفض لمرتين سيتوجب عليك تعديل ذلك من الاعدادات</string>
+
+    <!-- home Fragment-->
+    <string name="fajr">فجر</string>
+    <string name="dhuhr">ظهر</string>
+    <string name="asr">عصر</string>
+    <string name="maghrb">مغرب</string>
+    <string name="isha">عشاء</string>
+    <string name="perm_dialog_title">انتبه</string>
+    <string name="perm_dialog_body">لا يمكننا توفير اوقات الصلاة دون سماحك لنا بذلك</string>
+    <string name="gps_dialog_title">الاعدادات</string>
+    <string name="gps_dialog_body">قم بتفعيل نظام تحديد المواقع حتي يمكنني توفير الخدمة لك</string>
+
+    <!-- Qibla Fragment-->
+    <string name="qibla_dir">اتجاه القبلة</string>
+    <string name="qibla_down_txt">احداثيات موقعك الحالي</string>
+    <string name="qibla_up_txt">تقع القبلة في </string>
+    <string name="north">من الشمال</string>
+    <string name="location_ready">تم تحديد الموقع بنجاح</string>
+    <string name="enable_gps">فعل نظام تحديد المواقع</string>
+
+    <!-- Azkar Fragment-->
+    <string name="azkar">الأذكار</string>
+    <string name="fadl_azkar">تنال رضا الله وتحميك من كل شر وتكون في معية الله</string>
+    <string name="advice">اجعلها عادة في يومك</string>
+    <string name="morning">الصباح</string>
+    <string name="evening">المساء</string>
+
+    <!-- backdrop-->
+    <string name="language">EN</string>
+
+</resources>

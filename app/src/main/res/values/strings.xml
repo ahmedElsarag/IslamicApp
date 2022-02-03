@@ -1,10 +1,45 @@
 <resources>
-    <string name="app_name">IslamicApp</string>
-    <string name="alnisaa">Al-Nisaa</string>
-    <string name="alnisaa_ar">النساء</string>
-    <string name="ayat">Ayat: </string>
-    <string name="choose_language">Translation language</string>
-    <string name="choose_qarea">Audio</string>
+    <string name="app_name" translatable="false">IslamicApp</string>
+    <string name="alnisaa" translatable="false">Al-Nisaa</string>
+    <string name="alnisaa_ar" translatable="false">النساء</string>
+    <string name="ayat" translatable="false">Ayat: </string>
+    <string name="choose_language" translatable="false">Translation language</string>
+    <string name="choose_qarea" translatable="false">Audio</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="negative_btn">cancel</string>
+    <string name="positive_btn">accept</string>
+    <string name="deny_perm_twice">if you denied permission twice you will have to give permission from setting</string>
+
+    <!-- home Fragment-->
+    <string name="fajr">Fajr</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrb">Mag</string>
+    <string name="isha">Isha</string>
+
+    <string name="perm_dialog_title">Attention</string>
+    <string name="perm_dialog_body">we cant provide you with time without permission</string>
+    <string name="gps_dialog_title">Setting</string>
+    <string name="gps_dialog_body">Pleas enable GPS so we can provide service for you </string>
+
+    <!-- Qibla Fragment-->
+    <string name="qibla_dir">Qibla Direction</string>
+    <string name="qibla_down_txt">your current locatio is at</string>
+    <string name="qibla_up_txt">Qibla is</string>
+    <string name="north">from North</string>
+    <string name="location_ready">location ready</string>
+    <string name="enable_gps">enable gps</string>
+    <!-- Azkar Fragment-->
+    <string name="azkar">The Citation</string>
+    <string name="fadl_azkar">Gain God\'s pleasure and protection from all evil</string>
+    <string name="advice">Keep it daily</string>
+    <string name="morning">Morning</string>
+    <string name="evening">Evening</string>
+
+    <!-- backdrop-->
+    <string name="language">AR</string>
+
+
+
 </resources>

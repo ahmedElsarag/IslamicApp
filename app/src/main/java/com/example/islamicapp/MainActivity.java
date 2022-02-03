@@ -5,9 +5,14 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.islamicapp.common.NavigationHost;
 import com.example.islamicapp.common.NavigationIconClickListener;
@@ -16,6 +21,9 @@ import com.example.islamicapp.ui.AzkarFragment;
 import com.example.islamicapp.ui.HomeFragment;
 import com.example.islamicapp.ui.QiblaFragment;
 import com.example.islamicapp.ui.SurahFragment;
+
+import java.util.Locale;
+import java.util.TooManyListenersException;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost, View.OnClickListener {
 
@@ -35,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost, V
         binding.backDrop.quran.setOnClickListener(this);
         binding.backDrop.qibla.setOnClickListener(this);
         binding.backDrop.home.setOnClickListener(this);
+        binding.backDrop.language.setOnClickListener(this);
 
 
         getSupportFragmentManager().beginTransaction()
@@ -85,7 +94,37 @@ public class MainActivity extends AppCompatActivity implements NavigationHost, V
             case R.id.home:
                 ((NavigationHost) (MainActivity.this)).navigateTo(new HomeFragment(), true);
                 break;
+            case R.id.language:
+                if (binding.backDrop.language.getText().equals("AR")) {
+                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_LONG).show();
+                    setLocale("ar");
+                } else {
+                    setLocale("en");
+                }
+                break;
 
         }
+    }
+
+    private void setLocale(String language) {
+        //Initialize resources
+        Resources resources = getResources();
+        //Initialize metrics
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        //Initialize configuration
+        Configuration configuration = resources.getConfiguration();
+        if (language.equals("ar"))
+            configuration.setLayoutDirection(new Locale("ar"));
+        else
+            configuration.setLayoutDirection(new Locale("en"));
+        //Initialize locale
+        configuration.locale = new Locale(language);
+        //Update configuration
+        resources.updateConfiguration(configuration, metrics);
+        //Notify configuration
+        onConfigurationChanged(configuration);
+        Intent refresh = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(refresh);
     }
 }

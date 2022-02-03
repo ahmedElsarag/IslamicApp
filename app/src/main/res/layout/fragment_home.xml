@@ -130,9 +130,11 @@
 
                             <ImageView
                                 android:id="@+id/icon"
-                                android:layout_width="match_parent"
+                                android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/fagr" />
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/fagr"
+                                app:tint="@color/teal_200" />
 
 
                             <TextView
@@ -141,7 +143,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/icon"
                                 android:maxLines="1"
-                                android:text="Fajr"
+                                android:text="@string/fajr"
                                 android:textAlignment="center"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />
@@ -170,9 +172,11 @@
 
                             <ImageView
                                 android:id="@+id/icon2"
-                                android:layout_width="match_parent"
+                                android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/dhohr" />
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/dhohr"
+                                app:tint="@color/teal_200" />
 
 
                             <TextView
@@ -181,7 +185,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/icon2"
                                 android:maxLines="1"
-                                android:text="Dhuhr"
+                                android:text="@string/dhuhr"
                                 android:textAlignment="center"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />
@@ -210,9 +214,11 @@
 
                             <ImageView
                                 android:id="@+id/icon3"
-                                android:layout_width="match_parent"
+                                android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/asr" />
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/asr"
+                                app:tint="@color/teal_200" />
 
 
                             <TextView
@@ -221,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/icon3"
                                 android:maxLines="1"
-                                android:text="Asr"
+                                android:text="@string/asr"
                                 android:textAlignment="center"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />
@@ -250,9 +256,11 @@
 
                             <ImageView
                                 android:id="@+id/icon4"
-                                android:layout_width="match_parent"
+                                android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/maghrb" />
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/maghrb"
+                                app:tint="@color/teal_200" />
 
 
                             <TextView
@@ -261,7 +269,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/icon4"
                                 android:maxLines="1"
-                                android:text="Mag"
+                                android:text="@string/maghrb"
                                 android:textAlignment="center"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />
@@ -290,10 +298,12 @@
 
                             <ImageView
                                 android:id="@+id/icon5"
-                                android:layout_width="match_parent"
+                                android:layout_width="40dp"
                                 android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
                                 android:padding="4dp"
-                                android:src="@drawable/isha" />
+                                android:src="@drawable/isha"
+                                app:tint="@color/teal_200" />
 
 
                             <TextView
@@ -302,7 +312,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/icon5"
                                 android:maxLines="1"
-                                android:text="Isha"
+                                android:text="@string/isha"
                                 android:textAlignment="center"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />

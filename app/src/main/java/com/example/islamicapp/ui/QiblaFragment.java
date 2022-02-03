@@ -28,6 +28,7 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Toast;
 
+import com.example.islamicapp.R;
 import com.example.islamicapp.Variables;
 import com.example.islamicapp.common.Compass;
 import com.example.islamicapp.common.GPSTracker;
@@ -55,21 +56,21 @@ public class QiblaFragment extends Fragment {
                     getBearing();
                 } else {
                     new MaterialAlertDialogBuilder(getActivity())
-                            .setTitle("Attention")
-                            .setMessage("we cant provide you with qibla without permission")
-                            .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                            .setTitle(getResources().getString(R.string.perm_dialog_title))
+                            .setMessage(getResources().getString(R.string.perm_dialog_body))
+                            .setNegativeButton(getResources().getString(R.string.negative_btn), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     dialogInterface.dismiss();
                                 }
-                            }).setPositiveButton("accept", new DialogInterface.OnClickListener() {
+                            }).setPositiveButton(getResources().getString(R.string.positive_btn), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                                 // This is Case 3. Request for permission here
                                 //if user denied permission twice android will block request permession thi from android11
                             if (android.os.Build.VERSION.SDK_INT>=11){
                                 requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
-                                Toast.makeText(getContext(),"if yoy denied permission twice please give permission from setting"
+                                Toast.makeText(getContext(),getResources().getString(R.string.deny_perm_twice)
                                 ,Toast.LENGTH_LONG).show();
                             }
 
@@ -198,7 +199,7 @@ public class QiblaFragment extends Fragment {
         if (gps.canGetLocation()) {
             double latitude = gps.getLatitude();
             double longitude = gps.getLongitude();
-            binding.textDown.setText("your current locatio is at" + "\n" + "lat" + ": " + latitude + " long" + ": " + longitude);
+            binding.textDown.setText(getResources().getString(R.string.qibla_down_txt) + "\n" + "lat" + ": " + latitude + " long" + ": " + longitude);
             Log.e("TAG", "GPS is on");
             double lat_saya = gps.getLatitude();
             double lon_saya = gps.getLongitude();
@@ -207,7 +208,7 @@ public class QiblaFragment extends Fragment {
                 binding.mainImageQibla.setVisibility(View.GONE);
                 binding.textUp.setText("");
                 binding.textUp.setVisibility(View.GONE);
-                binding.textDown.setText("location ready");
+                binding.textDown.setText(getResources().getString(R.string.location_ready));
             } else {
                 double longitude2 = 39.826209; // Kaabah Position https://www.latlong.net/place/kaaba-mecca-saudi-arabia-12639.html
                 double longitude1 = lon_saya;
@@ -219,7 +220,7 @@ public class QiblaFragment extends Fragment {
                 result = (Math.toDegrees(Math.atan2(y, x)) + 360) % 360;
                 float result2 = (float) result;
                 SaveFloat("QiblaDegree", result2);
-                binding.textUp.setText("Qibla is " + result2 +" from North");
+                binding.textUp.setText(getResources().getString(R.string.qibla_up_txt)+ result2 +getResources().getString(R.string.north));
                 binding.textUp.setVisibility(View.VISIBLE);
                 binding.mainImageQibla.setVisibility(View.VISIBLE);
 
@@ -230,7 +231,7 @@ public class QiblaFragment extends Fragment {
             binding.mainImageQibla.setVisibility(View.GONE);
             binding.textUp.setText("");
             binding.textUp.setVisibility(View.GONE);
-            binding.textDown.setText("enable GPS");
+            binding.textDown.setText(getResources().getString(R.string.enable_gps));
         }
     }
 

@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -49,21 +50,21 @@ public class HomeFragment extends Fragment {
                     // app.
                 } else {
                     new MaterialAlertDialogBuilder(getActivity())
-                            .setTitle("Attention")
-                            .setMessage("we cant provide you with time without permission")
-                            .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                            .setTitle(getResources().getString(R.string.perm_dialog_title))
+                            .setMessage(getResources().getString(R.string.perm_dialog_body))
+                            .setNegativeButton(getResources().getString(R.string.negative_btn), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     dialogInterface.dismiss();
                                 }
-                            }).setPositiveButton("accept", new DialogInterface.OnClickListener() {
+                            }).setPositiveButton(getResources().getString(R.string.positive_btn), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             // This is Case 3. Request for permission here
                             //if user denied permission twice android will block request permession thi from android11
                             if (android.os.Build.VERSION.SDK_INT >= 11) {
                                 requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
-                                Toast.makeText(getContext(), "if yoy denied permission twice please give permission from setting"
+                                Toast.makeText(getContext(), getResources().getString(R.string.deny_perm_twice)
                                         , Toast.LENGTH_LONG).show();
                             }
 
@@ -78,6 +79,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(getLayoutInflater());
+
+
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
         if (ContextCompat.checkSelfPermission(
                 getContext(), Manifest.permission.ACCESS_FINE_LOCATION) ==
                 PackageManager.PERMISSION_GRANTED) {
@@ -90,8 +99,6 @@ public class HomeFragment extends Fragment {
             }
 
         }
-
-        return binding.getRoot();
     }
 
     public void fetch_GPS() {
@@ -121,6 +128,7 @@ public class HomeFragment extends Fragment {
             Log.d("TAG", "getData: " + prayerTimeResponse.getData().get(0).getDate().getReadable());
             for (int i = 0; i < prayerTimeResponse.getData().size(); ++i) {
                 if (day.equals(prayerTimeResponse.getData().get(i).getDate().getGregorian().getDay())) {
+
                     String fagr = prayerTimeResponse.getData().get(i).getTimings().getFajr().substring(0, 5);
                     String dhohr = prayerTimeResponse.getData().get(i).getTimings().getDhuhr().substring(0, 5);
                     String asr = prayerTimeResponse.getData().get(i).getTimings().getAsr().substring(0, 5);
