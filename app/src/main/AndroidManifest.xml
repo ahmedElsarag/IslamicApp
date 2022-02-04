@@ -16,24 +16,36 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".ApplicationClass"
         android:theme="@style/Theme.IslamicApp"
         android:usesCleartextTraffic="true">
-
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:configChanges="locale|orientation">
-
+            android:name=".MainActivity2"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale|orientation"
+            android:exported="true">
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <service android:name=".AudioService"/>
+        <receiver android:exported="true" android:name=".NotificationReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="NEXT"/>
+                <action android:name="PREVIOUS"/>
+                <action android:name="PLAY"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
