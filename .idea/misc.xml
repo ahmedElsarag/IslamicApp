@@ -9,7 +9,10 @@
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/collabs.xml" value="0.17401315789473684" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/gradiant_shape.xml" value="0.18" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.17401315789473684" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.129" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1295" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2755208333333333" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/ic_qibla_compass_svgrepo_com.xml" value="0.1295" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/media.xml" value="0.2755208333333333" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/nav_icon.xml" value="0.17401315789473684" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/drawable/purple_trans_shape.xml" value="0.18" />
@@ -26,9 +29,10 @@
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_azkar.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_home.xml" value="0.259375" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_media_player.xml" value="0.259375" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_qibla.xml" value="0.259375" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah.xml" value="0.16381578947368422" />
-        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah_details.xml" value="0.16381578947368422" />
+        <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/fragment_surah_details.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/main_back_drop.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/reader_item.xml" value="0.16381578947368422" />
         <entry key="..\:/AndroidProjects/IslamicApp/app/src/main/res/layout/surah_details_item.xml" value="0.16381578947368422" />

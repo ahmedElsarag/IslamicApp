@@ -4,127 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.SurahDetailsFragment">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_baseline_settings_24" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
+            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_700">
+                tools:context=".ui.SurahDetailsFragment">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="-20dp"
-                    android:src="@drawable/turkey" />
 
-                <TextView
-                    android:id="@+id/surah_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:text="Al-Faateha"
-                    android:textColor="@color/white"
-                    android:textSize="32sp" />
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/purple_700">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="-20dp"
+                            android:src="@drawable/turkey" />
+
+                        <TextView
+                            android:id="@+id/surah_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Al-Faateha"
+                            android:textColor="@color/white"
+                            android:textSize="32sp" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card" />
+
 
             </RelativeLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/card" />
+        </ScrollView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:cardElevation="8dp"
+            android:layout_margin="16dp"
             app:cardCornerRadius="50dp"
-            android:layout_margin="16dp">
+            app:cardElevation="8dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingStart="16dp"
                 android:background="@drawable/media"
-
+                android:paddingStart="16dp"
                 android:paddingEnd="16dp">
 
-                <RelativeLayout
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp">
-
-                    <ImageView
-                        android:id="@+id/play"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_play_circle_filled_24" />
-
-                    <ImageView
-                        android:id="@+id/pause"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_pause_circle_filled_24"
-                        android:visibility="gone" />
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/current_time"
+                    android:layout_centerInParent="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    android:visibility="gone"
+                    app:lottie_rawRes="@raw/playing"
+                    app:lottie_repeatMode="reverse" />
+                <ImageView
+                    android:id="@+id/animation_puase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/animation_paused"/>
+
+                <ImageView
+                    android:id="@+id/gifImageView"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_toStartOf="@id/playStopBtn"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:id="@+id/playStopBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:text="00:00" />
-
-                <SeekBar
-                    android:id="@+id/seek_bar"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/duration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="04:00" />
+                    android:src="@drawable/ic_baseline_play_circle_filled_24" />
 
 
-            </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/setting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_settings_24"
+                    app:tint="@color/teal_200" />
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/exoplayerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+
+        </com.google.android.exoplayer2.ui.PlayerView>
     </RelativeLayout>
 </layout>

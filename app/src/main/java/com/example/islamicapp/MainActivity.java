@@ -1,5 +1,6 @@
 package com.example.islamicapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -23,18 +24,22 @@ import com.example.islamicapp.ui.QiblaFragment;
 import com.example.islamicapp.ui.SurahFragment;
 
 import java.util.Locale;
-import java.util.TooManyListenersException;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost, View.OnClickListener {
 
     AzkarFragment azkarFragment;
     ActivityMainBinding binding;
+    Fragment mMyFragment = new HomeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        if (savedInstanceState != null) {
+            //Restore the fragment's instance
+            mMyFragment = getSupportFragmentManager().getFragment(savedInstanceState, "myFragmentName");
+        }
         binding.productGrid.setBackgroundResource(R.drawable.shr_product_grid_background_shape);
         setUpToolbar();
         azkarFragment = new AzkarFragment();
@@ -48,9 +53,16 @@ public class MainActivity extends AppCompatActivity implements NavigationHost, V
 
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
-                .add(R.id.fragment_container, HomeFragment.class, null)
+                .replace(R.id.fragment_container,mMyFragment,null)
                 .commit();
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //Save the fragment's instance
+        getSupportFragmentManager().putFragment(outState, "myFragmentName", mMyFragment);
     }
 
     @Override
@@ -83,16 +95,20 @@ public class MainActivity extends AppCompatActivity implements NavigationHost, V
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.quran:
-                ((NavigationHost) (MainActivity.this)).navigateTo(new SurahFragment(), true);
+                mMyFragment = new SurahFragment();
+                ((NavigationHost) (MainActivity.this)).navigateTo(mMyFragment, true);
                 break;
             case R.id.azkar:
-                ((NavigationHost) (MainActivity.this)).navigateTo(new AzkarFragment(), true);
+                mMyFragment = new AzkarFragment();
+                ((NavigationHost) (MainActivity.this)).navigateTo(mMyFragment, true);
                 break;
             case R.id.qibla:
-                ((NavigationHost) (MainActivity.this)).navigateTo(new QiblaFragment(), true);
+                mMyFragment = new QiblaFragment();
+                ((NavigationHost) (MainActivity.this)).navigateTo(mMyFragment, true);
                 break;
             case R.id.home:
-                ((NavigationHost) (MainActivity.this)).navigateTo(new HomeFragment(), true);
+                mMyFragment = new HomeFragment();
+                ((NavigationHost) (MainActivity.this)).navigateTo(mMyFragment, true);
                 break;
             case R.id.language:
                 if (binding.backDrop.language.getText().equals("AR")) {

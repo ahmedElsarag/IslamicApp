@@ -25,7 +25,7 @@ public class SurahFragment extends Fragment implements AdapterListener {
     SurahViewModel surahViewModel;
     private SurahAdapter surahAdapter;
     FragmentSurahBinding binding;
-    List<Surah> list;
+    public static List<Surah> list;
     public SurahFragment() {
         // Required empty public constructor
     }

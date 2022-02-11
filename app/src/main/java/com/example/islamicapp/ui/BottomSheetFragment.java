@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,9 @@ import com.example.islamicapp.Variables;
 import com.example.islamicapp.databinding.FragmentBottomSheetBinding;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class BottomSheetFragment extends BottomSheetDialogFragment implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
 
@@ -145,27 +149,34 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Ra
             case R.id.abdelbaset:
                 Log.d(TAG, "onClick: "+R.id.abdelbaset);
                 binding.include.abdelbaset.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.reader_selected_item));
+                //change the largeicon of notification player in description adapter
+                Variables.readerImage = R.drawable.abdelbaset;
                 selectReader("abdul_basit_murattal");
                 break;
             case R.id.mashary:
                 Log.d(TAG, "onClick: "+R.id.mashary);
                 binding.include.mashary.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.reader_selected_item));
+                Variables.readerImage = R.drawable.al3fasi;
                 selectReader("mishaari_raashid_al_3afaasee");
                 break;
             case R.id.yaser:
                 binding.include.yaser.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.reader_selected_item));
+                Variables.readerImage = R.drawable.eldosry;
                 selectReader("yasser_ad-dussary");
                 break;
             case R.id.alagmi:
                 binding.include.alagmi.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.reader_selected_item));
+                Variables.readerImage = R.drawable.alajmi;
                 selectReader("ahmed_ibn_3ali_al-3ajamy");
                 break;
             case R.id.fares:
                 binding.include.fares.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.reader_selected_item));
+                Variables.readerImage = R.drawable.fares;
                 selectReader("fares");
                 break;
             case R.id.nasr:
                 binding.include.nasr.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.reader_selected_item));
+                Variables.readerImage = R.drawable.naser;
                 selectReader("nasser_bin_ali_alqatami");
                 break;
 

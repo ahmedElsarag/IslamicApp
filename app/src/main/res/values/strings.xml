@@ -40,5 +40,7 @@
     <!-- backdrop-->
     <string name="language">AR</string>
 
+    <string name="chanel_name" translatable="false">Streaming Radio</string>
+
 
 </resources>

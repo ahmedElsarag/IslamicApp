@@ -43,7 +43,7 @@ public class HomeFragment extends Fragment {
     FragmentHomeBinding binding;
     String day;
 
-    ActivityResultLauncher<String> requestPermissionLauncher = requestPermissionLauncher =
+    ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (isGranted) {
                     // Permission is granted. Continue the action or workflow in your
